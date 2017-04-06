@@ -1,0 +1,39 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "The Odyssey",
+      "author": "Homer"
+    },
+    {
+      "id": 2,
+      "title": "The Greate Gatsby",
+      "author": "F. Scott Fitzgerald"
+    },
+    {
+      "id": 3,
+      "title": "The Hobbit",
+      "author": "J. R. R. Tolkien"
+    },
+    {
+      "id": 4,
+      "title": "1984",
+      "author": "George Orwell"
+    },
+    {
+      "id": 5,
+      "title": "Catch-22",
+      "author": "Joseph Heller"
+    },
+    {
+      "id": 6,
+      "title": "The Walking Dead",
+      "author": "John Doe"
+    },
+    {
+      "title": "Atlas Shrugged",
+      "author": "Ayn Rand",
+      "id": 7
+    }
+  ]
+}

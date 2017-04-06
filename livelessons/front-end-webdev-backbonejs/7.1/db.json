@@ -1,0 +1,19 @@
+{
+  "books": [
+    {
+      "id": 4,
+      "title": "1984",
+      "author": "George Orwell"
+    },
+    {
+      "id": 6,
+      "title": "The Walking Dead",
+      "author": "John Doe"
+    },
+    {
+      "title": "Atlas Shrugged",
+      "author": "Ayn Rand",
+      "id": 7
+    }
+  ]
+}
