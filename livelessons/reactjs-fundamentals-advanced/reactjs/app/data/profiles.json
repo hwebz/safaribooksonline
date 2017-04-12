@@ -1,0 +1,16 @@
+{
+    "profiles": [
+            {
+                "name": "Sue", 
+                "age": 30, 
+                "bio": "enjoys swimming and biking", 
+                "hobbies": ["swimming", "biking"]
+            },
+            {
+                "name": "Joe", 
+                "age": 40, 
+                "bio": "enjoys long walks on the beach", 
+                "hobbies": ["gardening", "games"]
+            }
+        ]
+}
