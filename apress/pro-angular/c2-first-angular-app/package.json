@@ -1,0 +1,39 @@
+{
+  "name": "chapter-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "typings": "typings",
+    "lite": "lite-server",
+    "tscwatch": "tsc -w",
+    "tsc": "tsc",
+    "start": "concurrently \"npm run tscwatch\" \"npm run lite\"",
+    "corejs": "npm run typings install dt~core-js --save --global",
+    "node": "npm run typings install dt~node --save --global",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/common": "^4.0.2",
+    "@angular/compiler": "^4.0.2",
+    "@angular/core": "^4.0.2",
+    "@angular/forms": "^4.0.2",
+    "@angular/platform-browser": "^4.0.2",
+    "@angular/platform-browser-dynamic": "^4.0.2",
+    "bootstrap": "^4.0.0-alpha.4",
+    "classlist.js": "^1.1.20150312",
+    "core-js": "^2.4.1",
+    "reflect-metadata": "^0.1.10",
+    "rxjs": "^5.3.0",
+    "systemjs": "^0.20.12",
+    "zone.js": "^0.8.5"
+  },
+  "devDependencies": {
+    "concurrently": "^3.4.0",
+    "lite-server": "^2.3.0",
+    "typescript": "^2.2.2",
+    "typings": "^2.1.1"
+  }
+}

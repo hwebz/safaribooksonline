@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Todo App</title>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+        <script src="node_modules/classlist.js/classlist.min.js"></script>
+        <script src="node_modules/core-js/client/shim.min.js"></script>
+        <script src="node_modules/zone.js/dist/zone.min.js"></script>
+        <script src="node_modules/reflect-metadata/Reflect.js"></script>
+        <script src="node_modules/systemjs/dist/system.src.js"></script>
+    </head>
+    <body>
+
+        <todo-app>Angular placeholder</todo-app>
+
+        <script src="systemjs.config.js"></script>
+        <script>
+            System.import("app").catch(function(err) {
+                console.log(err);
+            });
+        </script>
+    </body>
+</html>
