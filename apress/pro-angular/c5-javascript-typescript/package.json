@@ -4,8 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "concurrently \"npm run tscwatch\" \"npm run lite\"",
+    "tsc": "tsc",
+    "tscwatch": "tsc -w",
+    "lite": "lite-server",
+    "typings": "typings",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.4",
+    "classlist.js": "^1.1.20150312",
+    "core-js": "^2.4.1",
+    "systemjs": "^0.20.12"
+  },
+  "devDependencies": {
+    "concurrently": "^3.4.0",
+    "lite-server": "^2.3.0",
+    "typescript": "^2.2.2",
+    "typings": "^2.1.1"
+  }
 }

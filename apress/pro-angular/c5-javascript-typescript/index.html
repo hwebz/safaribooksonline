@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript & TypeScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="node_modules/systemjs/dist/system.src.js"></script>
+        <script>
+            System.config({
+                packages: {
+                    "": {
+
+                    }
+                }
+            });
+            System.import("primer").catch(function(error) {
+                console.log(error);
+            })
+        </script>
+    </head>
+    <body class="m-a-1">
+
+        <h3 class="bg-primary p-a-1">JavaScript Primer</h3>
+
+        <!--<script src="primer.js"></script>-->
+    </body>
+</html>
