@@ -1,3 +1,15 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
 console.log("Hello");
 console.log("Apples");
 console.log("This is a statement");
@@ -231,3 +243,100 @@ var totalValue = products
     .filter(function (item) { return item.stock > 0; })
     .reduce(function (prev, item) { return prev + (item.price * item.stock); }, 0);
 console.log("Total value: $" + totalValue.toFixed(2));
+// Objects
+var myData = new Object();
+myData.name = "Admin";
+myData.weather = "sunny";
+console.log("Hello " + myData.name + ".");
+console.log("Today is " + myData.weather + ".");
+var myData2 = {
+    name: "Adam",
+    weather: "sunny",
+    printMessages: function () {
+        console.log("Hello " + this.name + ".");
+        console.log("Today is " + this.weather + ".");
+    }
+};
+console.log("Hello " + myData2.name + ".");
+console.log("Today is " + myData2.weather + ".");
+myData2.printMessages();
+// Classes
+var MyClass = (function () {
+    function MyClass(name, weather) {
+        this.name = name;
+        this._weather = weather;
+    }
+    Object.defineProperty(MyClass.prototype, "weather", {
+        get: function () {
+            return "Today is " + this._weather;
+        },
+        set: function (value) {
+            this._weather = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    MyClass.prototype.printMessages = function () {
+        console.log("Hello " + this.name + ".");
+        console.log(this.weather);
+    };
+    return MyClass;
+}());
+var myData3 = new MyClass("Adam", "Sunny");
+myData3.printMessages();
+var MySubClass = (function (_super) {
+    __extends(MySubClass, _super);
+    function MySubClass(name, weather, city) {
+        var _this = _super.call(this, name, weather) || this;
+        _this.city = city;
+        return _this;
+    }
+    MySubClass.prototype.printMessages = function () {
+        _super.prototype.printMessages.call(this);
+        console.log("You are in " + this.city);
+    };
+    return MySubClass;
+}(MyClass));
+var myData4 = new MySubClass("Adam", "sunny", "London");
+myData4.printMessages();
+// ECMA5
+/*var MyClass = function MyClass(name, weather) {
+    this.name = name;
+    this.weather = weather;
+}
+
+MyClass.prototype.printMessages = function() {
+    console.log("Hello " + this.name + ".");
+    console.log("Today is " + this.weather + ".");
+};
+
+var myData3 = new MyClass("Admam", "sunny");
+myData3.printMessages();*/
+var NameAndWeather_1 = require("./modules/NameAndWeather");
+var NameWeatherLocation = require("./modules/NameAndWeather");
+var DuplicateName_1 = require("./modules/DuplicateName");
+var tempConverter_1 = require("./modules/tempConverter");
+var name = new NameAndWeather_1.Name("Adam", "sunny");
+var loc = new NameAndWeather_1.WeatherLocation("raining", "London");
+var other = new DuplicateName_1.Name();
+var name3 = new NameWeatherLocation.Name("Jackie", "cloudly");
+var loc2 = new NameWeatherLocation.WeatherLocation("raining", "Manchester");
+// let cTemp = TempConverter.convertFtoC("38");
+var cTemp = tempConverter_1.TempConverter.convertFtoC(38);
+console.log(name.nameMessage);
+console.log(loc.weatherMessage);
+console.log(other.message);
+console.log(name3.nameMessage);
+console.log(loc2.weatherMessage);
+console.log("The temp is " + cTemp + "C");
+var tuple;
+tuple = ["London", "raining", tempConverter_1.TempConverter.convertFtoC("38")];
+console.log("It is " + tuple[2] + " degrees C and " + tuple[1] + " in " + tuple[0]);
+var cities = {};
+cities["London"] = ["raining", tempConverter_1.TempConverter.convertFtoC("38")];
+cities["Paris"] = ["sunny", tempConverter_1.TempConverter.convertFtoC("52")];
+cities["Berlin"] = ["snowing", tempConverter_1.TempConverter.convertFtoC("23")];
+for (var key in cities) {
+    console.log(key + ": " + cities[key][0] + ", " + cities[key][1]);
+}
+// console.log(TempConverter.performCalculation(52)); 
