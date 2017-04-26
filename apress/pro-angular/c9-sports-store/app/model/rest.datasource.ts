@@ -32,7 +32,6 @@ export class RestDataSource {
     }
 
     getProducts(): Observable<Product[]> {
-        console.log(this)
         return this.sendRequest(RequestMethod.Get, "products")
     }
 
@@ -70,7 +69,6 @@ export class RestDataSource {
             auth: boolean = false): Observable<Product | Product[] | Order | Order[]> {
         let headers = new Headers();
         headers.append("authorization", `Bearer<${this.auth_token}>`)
-        console.log(this)
         let options = undefined
 
         if (auth && this.auth_token != null) {

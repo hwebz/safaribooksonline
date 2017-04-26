@@ -25,7 +25,6 @@ export class AuthComponent {
                     }
                     this.errorMessage = "Authentication failed!"
                 })
-            this.router.navigateByUrl("/admin/main")
         } else {
             this.errorMessage = "Form data invalid!"
         }

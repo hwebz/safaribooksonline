@@ -34,7 +34,6 @@ var RestDataSource = (function () {
         });
     };
     RestDataSource.prototype.getProducts = function () {
-        console.log(this);
         return this.sendRequest(http_1.RequestMethod.Get, "products");
     };
     RestDataSource.prototype.saveProduct = function (product) {
@@ -62,7 +61,6 @@ var RestDataSource = (function () {
         if (auth === void 0) { auth = false; }
         var headers = new http_1.Headers();
         headers.append("authorization", "Bearer<" + this.auth_token + ">");
-        console.log(this);
         var options = undefined;
         if (auth && this.auth_token != null) {
             options = new http_1.RequestOptions({ headers: headers });

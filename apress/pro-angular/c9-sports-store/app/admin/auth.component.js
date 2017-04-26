@@ -28,7 +28,6 @@ var AuthComponent = (function () {
                 }
                 _this.errorMessage = "Authentication failed!";
             });
-            this.router.navigateByUrl("/admin/main");
         }
         else {
             this.errorMessage = "Form data invalid!";
