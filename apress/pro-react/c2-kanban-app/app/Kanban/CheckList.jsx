@@ -1,8 +1,16 @@
-import React, {Component} from 'react'
+import React, {Component, PropTypes} from 'react'
 
 class CheckList extends Component {
     constructor(props) {
         super(props)
+        this.handleChange = this.handleChange.bind(this)
+    }
+
+    handleChange(e) {
+        let input = this.refs.newTask;
+        let inputValue = input.value;
+        let inputRect = input.getBoundingClientRect();
+        console.log(input, inputValue, inputRect)
     }
 
     render() {
@@ -24,11 +32,16 @@ class CheckList extends Component {
                     {tasksList}
                 </ul>
                 <div className="checklist--add-task">
-                    <input type="text" className="form-control" placeholder="Type then hit Enter to add a task"/>
+                    <input type="text" onChange={this.handleChange} className="form-control" placeholder="Type then hit Enter to add a task" ref="newTask" />
                 </div>
             </div>
         )
     }
+}
+
+CheckList.propTypes = {
+    cardId: PropTypes.number,
+    tasks: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default CheckList
